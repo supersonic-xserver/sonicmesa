@@ -17,6 +17,7 @@ ssx_xaa_files = files(
 ssx_xaa_deps = [
   dep_libdrm,
   dep_threads,
+  dep_uring,
 ]
 
 ssx_xaa_inc = include_directories('.')

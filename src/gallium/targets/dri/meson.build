@@ -20,6 +20,11 @@ if with_gallium_va
   endif
 endif
 
+# Sovereign ssX XAA Hardware Bridge - Link into DRI when enabled
+if with_ssx_xaa
+  gallium_dri_link_with += [libssx_xaa]
+endif
+
 dri_sym = configure_file(input : 'dri.sym.in', output : 'dri.sym', configuration : sym_config)
 
 if with_ld_version_script

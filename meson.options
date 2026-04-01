@@ -879,3 +879,11 @@ option(
   value : false,
   description : 'use experimental virtio backend for intel driver',
 )
+
+option(
+  'ssx_xaa',
+  type : 'combo',
+  value : 'disabled',
+  choices : ['enabled', 'disabled'],
+  description : 'Enable the Sovereign ssX XAA Hardware Bridge (Direct-to-Metal 2D)'
+)

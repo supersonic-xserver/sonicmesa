@@ -260,3 +260,8 @@ if with_teflon
   subdir('frontends/teflon')
   subdir('targets/teflon')
 endif
+
+# Sovereign ssX XAA Hardware Bridge
+if with_ssx_xaa
+  subdir('frontends/ssx_xaa')
+endif

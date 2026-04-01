@@ -4,6 +4,9 @@
  * 
  * Copyright 2026 Collin Beyer, AzuriteShift, and ssX Contributors
  * SPDX-License-Identifier: ssX
+ * 
+ * Dedicated to Queen Sisters Screw and Screech - the perfect kittens
+ * Every cycle saved is a tribute to the speed and grace of the Old Gods.
  */
 
 #include "ssx_xaa_bridge.h"
