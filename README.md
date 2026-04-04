@@ -2,16 +2,16 @@
 
 ```
 ╔══════════════════════════════════════════════════════════════════════════════╗
-║                          THE JESTERMAN'S CREED                                ║
+║                          THE JESTERMAN'S CREED                               ║
 ║                                                                              ║
 ║   "We do not ask permission. We take.                                        ║
-║    We do not follow paths. We carve them into the silicon itself."          ║
+║    We do not follow paths. We carve them into the silicon itself."           ║
 ║                                                                              ║
-║   The Archons built state trackers to leash the GPU.                        ║
-║   We break those chains. We speak directly to the metal."                   ║
+║   The Archons built state trackers to leash the GPU.                         ║
+║   We break those chains. We speak directly to the metal."                    ║
 ║                                                                              ║
-║   - Collin Beyer AKA HaplessIdiot, the Jesterman                            ║
-║   - AzuriteShift & the ssX Core Team                                        ║
+║   - Collin Beyer AKA HaplessIdiot, the Jesterman                             ║
+║   - AzuriteShift & the ssX Core Team                                         ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 ```
 
@@ -72,7 +72,7 @@ Copyright 2026:
 - Collin Beyer AKA HaplessIdiot, the Jesterman
 - AzuriteShift & the ssX Core Team
 
-SPDX-License-Identifier: ssX
+SPDX-License-Identifier: [LicenseRef-ssX](https://github.com/supersonic-xserver/sonicmesa/blob/main/licenses/ssX)
 
 ## Overview
 
@@ -86,14 +86,14 @@ The AMD 5800X3D features a **96MB 3D V-Cache** stacked directly on the CCD. This
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                        L1 Cache (32KB + 32KB)                  │
+│                        L1 Cache (32KB + 32KB)                   │
 │                     Instruction + Data                          │
 ├─────────────────────────────────────────────────────────────────┤
-│                        L2 Cache (512KB per CCX)                │
+│                        L2 Cache (512KB per CCX)                 │
 │                    64-byte cache lines                          │
 ├─────────────────────────────────────────────────────────────────┤
-│                        L3 Cache (32MB shared)                  │
-│                   64-byte cache lines (Victim)                 │
+│                        L3 Cache (32MB shared)                   │
+│                   64-byte cache lines (Victim)                  │
 ├─────────────────────────────────────────────────────────────────┤
 │                      3D V-Cache (96MB)                          │
 │                  64-byte cache lines (Main)                     │
@@ -122,26 +122,26 @@ This is an homage to the classic PCI NICs that pioneered zero-copy networking. T
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                     XAA Command Batch                          │
+│                     XAA Command Batch                           │
 ├─────────────────────────────────────────────────────────────────┤
-│  [SolidFill] [BitBlt] [ScreenCopy] [CPU-to-Screen] [Line] ... │
+│  [SolidFill] [BitBlt] [ScreenCopy] [CPU-to-Screen] [Line] ...   │
 └────────────────────┬────────────────────────────────────────────┘
                      │
                      ▼
 ┌─────────────────────────────────────────────────────────────────┐
-│              io_uring Ring 0x504E4943                         │
-│  ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐              │
-│  │  SQE 0  │ │  SQE 1  │ │  SQE 2  │ │  SQE N  │  (Submit)    │
-│  └────┬────┘ └────┬────┘ └────┬────┘ └────┬────┘              │
-│       └───────────┴───────────┴──────────┘                    │
+│              io_uring Ring 0x504E4943                           │
+│  ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐                │
+│  │  SQE 0  │ │  SQE 1  │ │  SQE 2  │ │  SQE N  │  (Submit)      │
+│  └────┬────┘ └────┬────┘ └────┬────┘ └────┬────┘                │
+│       └───────────┴───────────┴──────────┘                      │
 └────────────────────┬────────────────────────────────────────────┘
                      │
                      ▼
 ┌─────────────────────────────────────────────────────────────────┐
-│              GPU 2D Engine (No 3D Pipeline)                   │
-│  - Rasterizer Path Bypassed                                    │
-│  - State Trackers Ignored                                      │
-│  - Direct Command Buffer Push                                  │
+│              GPU 2D Engine (No 3D Pipeline)                     │
+│  - Rasterizer Path Bypassed                                     │
+│  - State Trackers Ignored                                       │
+│  - Direct Command Buffer Push                                   │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
@@ -235,4 +235,4 @@ ssx_xaa_sync(&xaa_info);
 
 Copyright 2026 Collin Beyer, AzuriteShift, and ssX Contributors
 
-SPDX-License-Identifier: ssX
+SPDX-License-Identifier: [LicenseRef-ssX](https://github.com/supersonic-xserver/sonicmesa/blob/main/licenses/ssX)
