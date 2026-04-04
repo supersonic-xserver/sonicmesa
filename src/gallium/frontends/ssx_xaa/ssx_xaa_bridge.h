@@ -3,7 +3,7 @@
  * Direct-to-metal 2D acceleration for 5800X3D
  * 
  * Copyright 2026 Collin Beyer, AzuriteShift, and ssX Contributors
- * SPDX-License-Identifier: ssX
+ * SPDX-License-Identifier: LicenseRef-ssX
  */
 
 #ifndef SSX_XAA_BRIDGE_H

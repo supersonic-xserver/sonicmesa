@@ -3,7 +3,7 @@
  * High-performance command submission for 5800X3D
  * 
  * Copyright 2026 Collin Beyer, AzuriteShift, and ssX Contributors
- * SPDX-License-Identifier: ssX
+ * SPDX-License-Identifier: LicenseRef-ssX
  */
 
 #include "ssx_xaa_io_uring.h"

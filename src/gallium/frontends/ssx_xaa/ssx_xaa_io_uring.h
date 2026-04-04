@@ -5,7 +5,7 @@
  * Ring: 0x504E4943 (ASCII: "PNIC" - "PCI NIC" homage)
  * 
  * Copyright 2026 Collin Beyer, AzuriteShift, and ssX Contributors
- * SPDX-License-Identifier: ssX
+ * SPDX-License-Identifier: LicenseRef-ssX
  */
 
 #ifndef SSX_XAA_IO_URING_H

@@ -3,7 +3,7 @@
  * Direct-to-metal 2D acceleration for 5800X3D
  * 
  * Copyright 2026 Collin Beyer, AzuriteShift, and ssX Contributors
- * SPDX-License-Identifier: ssX
+ * SPDX-License-Identifier: LicenseRef-ssX
  * 
  * Dedicated to Queen Sisters Screw and Screech - the perfect kittens
  * Every cycle saved is a tribute to the speed and grace of the Old Gods.

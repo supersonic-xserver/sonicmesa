@@ -1,7 +1,7 @@
 # SonicMesa - ssX XAA Frontend Build Configuration
 #
 # Copyright 2026 Collin Beyer, AzuriteShift, and ssX Contributors
-# SPDX-License-Identifier: ssX
+# SPDX-License-Identifier: LicenseRef-ssX
 
 # ssX XAA Frontend Library
 # Provides direct-to-metal 2D acceleration via XAA for 5800X3D
