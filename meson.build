@@ -348,9 +348,6 @@ endif
 # Sovereign ssX XAA Hardware Bridge
 with_ssx_xaa = get_option('ssx_xaa') == 'enabled'
 dep_uring = dependency('liburing', required : with_ssx_xaa)
-if with_ssx_xaa and not dep_uring.found()
-  error('ssx_xaa requires liburing. Install liburing-devel or disable ssX with -Dssx_xaa=disabled')
-endif
 if with_ssx_xaa and dep_uring.found()
   pre_args += '-DHAVE_SSX_XAA'
 endif
