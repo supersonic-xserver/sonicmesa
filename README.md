@@ -29,10 +29,10 @@ Every structure in `ssx_xaa_bridge.h` is aligned to 64 bytes using `__attribute_
 - **The Benefit**: Core XAA acceleration vectors fit perfectly into the AMD 5800X3D L2/L3 cache lines.
 - **The Result**: Zero-stall execution. The CPU never waits for a misaligned memory fetch when pushing bits.
 
-### 🌀 io_uring: Ring 0x504E4943 (SONIC)
+### 🌀 io_uring: Ring 0x534F4E4943 (SONIC)
 We use the Linux io_uring interface to bypass the kernel-space overhead of traditional ioctl/socket calls.
 
-- **The Ring**: 0x504E4943 is our high-fidelity telemetry and command pulse.
+- **The Ring**: 0x534F4E4943 is our high-fidelity telemetry and command pulse.
 - **Batching**: Hundreds of 2D UI updates (BitBlts, fills, text tiles) are batched into a single ring submission.
 - **Latency**: Sub-microsecond dispatch from the user-space engine to the GPU hardware queue.
 
@@ -108,15 +108,15 @@ The AMD 5800X3D features a **96MB 3D V-Cache** stacked directly on the CCD. This
 2. **Vectorize with SIMD** - SSE/AVX for 16-32 pixels per iteration
 3. **Batch before submit** - Group UI updates (text, window moves) into single io_uring submission
 
-## The 0x504E4943 Ring (SONIC)
+## The 0x534F4E4943 Ring (SONIC)
 
 ### Ring Magic Number
 
 ```
-0x504E4943 = 'P' 'N' 'I' 'C' in ASCII
+0x534F4E4943 = 'S' 'O' 'N' 'I' 'C' in ASCII
 ```
 
-This is an homage to the classic PCI NICs that pioneered zero-copy networking. The ring operates at the **Sovereign level** - not userspace, not kernelspace, but direct hardware submission.
+This ring operates at the **Sovereign level** - not userspace, not kernelspace, but direct hardware submission.
 
 ### Batch Submission Process
 
@@ -129,11 +129,11 @@ This is an homage to the classic PCI NICs that pioneered zero-copy networking. T
                      │
                      ▼
 ┌─────────────────────────────────────────────────────────────────┐
-│              io_uring Ring 0x504E4943                           │
-│  ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐                │
-│  │  SQE 0  │ │  SQE 1  │ │  SQE 2  │ │  SQE N  │  (Submit)      │
-│  └────┬────┘ └────┬────┘ └────┬────┘ └────┬────┘                │
-│       └───────────┴───────────┴──────────┘                      │
+│              io_uring Ring 0x534F4E4943                         │
+│  ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐              │
+│  │  SQE 0  │ │  SQE 1  │ │  SQE 2  │ │  SQE N  │  (Submit)    │
+│  └────┬────┘ └────┬────┘ └────┬────┘ └────┬────┘              │
+│       └───────────┴───────────┴──────────┘                    │
 └────────────────────┬────────────────────────────────────────────┘
                      │
                      ▼
@@ -160,7 +160,7 @@ X11 Client → X Server → GLX → Mesa State Tracker → Gallium → Driver �
 
 ### The ssX Way (Sovereign Path):
 ```
-X11 Client → ssX XAA Bridge → io_uring 0x504E4943 → GPU 2D Engine
+X11 Client → ssX XAA Bridge → io_uring 0x534F4E4943 SONIC → GPU 2D Engine
 ```
 
 **No intermediate state trackers. No Gallium context. No 3D pipeline.**
